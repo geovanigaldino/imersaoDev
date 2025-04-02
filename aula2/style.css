@@ -1,0 +1,67 @@
+/* Estilo Global */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+}
+  
+/* Estilo logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+  
+/* Container com a imagem de fundo */
+.container {
+    background: url('assets/fundo-pedra-papel-tesoura.PNG') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  
+/* Conteúdo da div para texto e botão */
+.content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+  
+.content h2 {
+    margin-bottom: 20px;
+}
+  
+/* Estilos botões */
+button {
+    background-color: #ff1b7b;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #1ABC9C;
+}
+  
+/* Estilo footer */
+footer {
+    text-align: center;
+    padding: 5px;
+}
+  
