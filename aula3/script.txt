@@ -1,0 +1,39 @@
+let rodada = 1;
+let vidas = 3;
+let pontuacao = 0;
+const recorde = localStorage.getItem('recorde') || 0;
+
+alert(`Bem-vindo ao Jogo da Ponte! Seu recorde atual é: ${recorde}`);
+
+while (rodada <= 3 && vidas > 0) {
+    console.clear();
+    console.log(`%cRodada: ${rodada} | Vidas: ${vidas} | Pontos: ${pontuacao}`, "color: blue");
+    
+    const escolhaJogador = parseInt(prompt(`Nível ${rodada}\nEscolha 1, 2 ou 3:`));
+    
+    if (![1, 2, 3].includes(escolhaJogador)) {
+        alert("Inválido! Perdeu uma vida.");
+        vidas--;
+        continue;
+    }
+
+    const pisoQuebrado = Math.floor(Math.random() * 3) + 1;
+    
+    if (escolhaJogador === pisoQuebrado) {
+        vidas--;
+        alert(`💥 Quebrou! Piso ${pisoQuebrado} era frágil. Vidas: ${vidas}`);
+    } else {
+        pontuacao += 100 * rodada;
+        alert(`✅ Seguro! Piso quebrado era ${pisoQuebrado}. Pontos: ${pontuacao}`);
+        rodada++;
+    }
+}
+
+if (vidas > 0 && rodada > 3) {
+    alert(`🎉 Vitória! Pontuação: ${pontuacao}`);
+    if (pontuacao > recorde) {
+        localStorage.setItem('recorde', pontuacao);
+    }
+} else {
+    alert("Game Over! Tente novamente.");
+}
