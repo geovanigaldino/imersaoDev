@@ -23,7 +23,7 @@ body {
 
 /* Container with the background image */
 .container {
-  background: url('assets/background.PNG') no-repeat center center/cover;
+  background: url('assets/background-jogo-vidros.PNG') no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -63,4 +63,3 @@ footer {
   text-align: center;
   padding: 10px;
 }
-  
