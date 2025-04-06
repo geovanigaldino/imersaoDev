@@ -29,11 +29,7 @@ body {
     left: 0;
 }
 
-.content-wrapper {
-    overflow-y: auto;
-    height: 100vh;
-    width: 100%;
-}
+
 
 /* Container do Conteúdo */
 .content {
