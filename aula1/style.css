@@ -15,6 +15,24 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    
+    background-attachment: fixed;
+    -webkit-background-attachment: fixed; /* Para Safari */
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content-wrapper {
+    overflow-y: auto;
+    height: 100vh;
+    width: 100%;
 }
 
 /* Container do Conteúdo */
