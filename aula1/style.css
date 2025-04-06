@@ -1,52 +1,81 @@
-/* Global Styles */
+/* Estilos Globais */
 body {
-    background-color: black;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
-    position: relative;
+    background-color: black; /* Fundo preto de fallback */
 }
-  
-/* Logo Styles */
-.logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    max-width: 150px;
-    width: auto;
-}
-  
-/* Container with the background image */
+
+/* Container principal com background */
 .container {
     background: url(assets/round-6.jpg) no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-/* Content div for text and button */
+/* Container do Conteúdo */
 .content {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.853);
     padding: 20px 40px;
     border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
 }
-  
+
 .content h2 {
     margin-bottom: 20px;
 }
 
-/* Button Styles */
+/* Formulário de Conversão */
+.form-conversor form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-conversor select,
+.form-conversor input {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #1ABC9C;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    width: 200px;
+    transition: border-color 0.3s ease;
+    background: transparent;
+}
+
+.form-conversor input::placeholder {
+    color: #1ABC9C;
+}
+
+.form-conversor select {
+    background-color: transparent;
+    color: #1ABC9C;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Botões */
 button {
-    background-color: #ff1b7b;
+    background-color: #ba1e5f;
     border: none;
     border-radius: 50px;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
     cursor: pointer;
+    font-weight: 500;
+    margin-left: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -54,8 +83,105 @@ button:hover {
     background-color: #1ABC9C;
 }
 
-/* Footer Styles */
+/* Rodapé */
 footer {
     text-align: center;
+    font-weight: bold;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+    .content {
+        padding: 15px 30px;
+        width: 85%;
+    }
+}
+
+/* Tablet Pequeno: 600px - 768px */
+@media (max-width: 768px) {
+    .content {
+        padding: 15px 20px;
+    }
+    
+    .form-conversor form {
+        gap: 15px;
+    }
+    
+    .form-conversor select,
+    .form-conversor input {
+        width: 180px;
+        padding: 8px 12px;
+    }
+    
+    button {
+        padding: 8px 16px;
+    }
+}
+
+/* Celular Grande: 480px - 600px */
+@media (max-width: 600px) {    
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .form-conversor form {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .form-conversor select,
+    .form-conversor input {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 250px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Celular Pequeno: até 480px */
+@media (max-width: 480px) {   
+    .content h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .form-conversor select,
+    .form-conversor input {
+        font-size: 0.9em;
+    }
+    
+    footer {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+/* Telas muito pequenas (orientação retrato) */
+@media (max-width: 360px) {
+    .content {
+        width: 95%;
+        padding: 12px;
+    }
+    
+    .content h2 {
+        font-size: 1.2em;
+    }
+    
+    .form-conversor select,
+    .form-conversor input {
+        font-size: 0.85em;
+        padding: 7px 10px;
+    }
 }

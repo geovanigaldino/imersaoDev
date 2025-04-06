@@ -8,12 +8,31 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
     <div class="container">
         <div class="content">
           <h2>Quem ganha, ganha em Wons!</h2>
           <p> Que tal converter esse valor?</p>
-          <button onclick="conversor()">Bora converter!</button>
+
+          <div class="form-conversor">
+              <div class="form">
+                <form onsubmit="conversor(); return false;">
+                    <select id="moeda">
+                        <option value="">Selecione a moeda</option>
+                        <option value="real">Real</option>
+                        <option value="dolar">Dólar</option>
+                        <option value="euro">Euro</option>
+                    </select>
+                    <input type="number" placeholder="Digite o valor em Wons" id="valor-won" disabled>
+
+                    <div class="botoes">
+                        <button type="submit" id="botao-converter" disabled>Bora converter!</button>
+                        <button id="botao-limpar" type="button">Limpar</button>
+                    </div>
+                </form>
+              </div>              
+          </div>
+
+          <p id="resultado"></p>
         </div>
     </div>
     <footer>Alura - Imersão DEV - 2025</footer>
