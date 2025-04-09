@@ -1,3 +1,24 @@
+.spinner {
+    margin: 20px auto;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.carregando-texto {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /* Estilo Global */
 body {
     background-color: black;
@@ -58,10 +79,65 @@ button {
 button:hover {
     background-color: #1ABC9C;
 }
+
+input {
+    background-color: hsla(168, 76%, 42%, 0.171);
+    border: 1px solid #1ABC9C;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
   
 /* Estilo footer */
 footer {
     text-align: center;
     padding: 5px;
 }
+
+/* MEDIA QUERY para telas menores que 600px (celulares) */
+@media (max-width: 600px) {
+    .content {
+      padding: 15px 20px;
+    }
+  
+    h2, h3 {
+      font-size: 1.2em;
+    }
+  
+    button {
+      width: 90%;
+      font-size: 1.1em;
+      margin: 10px auto;
+      display: block;
+    }
+  
+    input {
+      width: 90%;
+      margin: 10px auto;
+      display: block;
+    }
+  
+    .logo {
+      top: 10px;
+      right: 10px;
+      max-width: 100px;
+    }
+  
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border-width: 6px;
+    }
+  
+    .carregando-texto {
+      font-size: 1rem;
+    }
+  }
+  
   

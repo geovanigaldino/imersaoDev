@@ -14,15 +14,22 @@
         <div class="content">
             <h2>Pra ganhar é preciso arriscar!</h2>
             <p> PEDRA, PAPEL ou TESOURA?</p>
-            <button onclick="jogar()">Bora jogar!</button>
+            <button id="botaoJogar" onclick="jogar()">Bora jogar!</button>
 
             <div id="formulario" style="display: none;">
                 <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="off">
                 <input type="number" id="idade" placeholder="Digite sua idade" autocomplete="off">
-                <button id="enviar">Enviar</button>
+                <button id="jogar">Jogar</button>
             </div>
 
+            <div id="carregando" style="display: none;">Computador está escolhendo...</div>
+
             <div id="mensagem" class="mensagem"></div>
+
+            <div id="placar" style="text-align:center; font-weight: bold; margin: 10px 0;">
+                👨‍💻 <span id="nome-jogador">Jogador</span>: 0 &nbsp;&nbsp; 🖥️ Computador: 0
+            </div>
+              
         </div>
 
         
