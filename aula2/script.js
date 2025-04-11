@@ -101,7 +101,7 @@ function jogarRodada(escolhaJogador, nome) {
             <p>Computador escolheu: <strong>${opcoes[escolhaComputador]}</strong></p>
             <p><strong>${resultado}</strong></p>
             <button onclick="iniciarJogo('${nome}')">Jogar novamente</button>
-            <button onclick="reiniciarJogo()">Voltar ao Início</button>
+            <button onclick="reiniciarJogo()">Reiniciar</button>
         `;
 
         
